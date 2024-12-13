@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000; /* Set background to black */
+    color: #fff; /* Set text color to white for contrast */
 }
 
 header {
@@ -30,16 +30,6 @@ main {
     text-align: center;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Game Grid Styles */
 .game-grid {
     display: grid;
@@ -49,8 +39,8 @@ footer {
 }
 
 .game-item {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: #222; /* Dark background for game items */
+    border: 1px solid #444; /* Darker border */
     border-radius: 5px;
     overflow: hidden;
     text-align: center;
