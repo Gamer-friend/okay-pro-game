@@ -2,8 +2,8 @@
 <strings>
 	<string id="Intro01">START CONTENT</string>
 	<string id="Intro02">Welcome to Andrew's Game!</string>
-	<string id="Intro03">I hope you enjoy it...!</string>
-	<string id="Intro04">Here we go! ERROR:string.varinport?=true set font>=>23.1[var:START=true] did not compute. Starting with regular-computer.js...</string>
+	<string id="Intro03">I hope you enjoy it...! :)</string>
+	<string id="Intro04">Here we go! warning data.js did not compute correctly. starting off with backupData.js...</string>
 	<string id="Intro05">Starting...please wait...</string>
 	<string id="Intro05b">Why hello there! Welcome...!</string>
 	<string id="Intro06">This is a good AME Not GAME because.....</string>
