@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-	<string id="Intro01">Hello, User! Welcome to Andrew's Game! I was created by Andrew to provide you with an exciting gaming experience. Enjoy playing! </string>
+	<string id="Intro01">Hello, User! Welcome to Andrew's Game!></string>
 	<string id="Intro02">I ... I have bad news.</string>
 	<string id="Intro03">Actually, there is no game.</string>
 	<string id="Intro04">So, I hope you're not too much disappointed.</string>
