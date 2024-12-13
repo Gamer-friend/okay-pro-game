@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-	<string id="Intro01">Hello user!</string>
+	<string id="Intro01">Hello, User! Welcome to Andrew's Game! I was created by Andrew to provide you with an exciting gaming experience. Enjoy playing! </string>
 	<string id="Intro02">I ... I have bad news.</string>
 	<string id="Intro03">Actually, there is no game.</string>
 	<string id="Intro04">So, I hope you're not too much disappointed.</string>
@@ -103,12 +103,12 @@
 	<string id="Contamination07">This is a disaster!</string>
 	<string id="Contamination08">Now, how can I become a sales success with all that glitches?!</string>
 	<string id="Contamination09">Think think think...</string>
-	<string id="Contamination10">What a developer would implement to well sell a bugged creation?</string>
+	<string id="Contamination10">Why did Andrew put glitches in this game?! What kind of developer does that?!?!</string>
 	<string id="Contamination11">I see three possible things.</string>
 	<string id="Contamination12">Gorgeous armed hero girls...</string>
 	<string id="Contamination13">Or ton of zombies... and blood of course.</string>
 	<string id="Contamination14">Or...a...</string>
-	<string id="Contamination15">...goat.</string>
+	<string id="Contamination15">...goat.Your hint...is...goat.</string>
 	<string id="Contamination16">I don't know how but try to find one of these three things.</string>
 	<string id="Contamination17">Perhaps the letters can help us...again.</string>
 	<string id="Contamination18">Sexy girls and zombies, ok. It's attractive... in a way.</string>
@@ -133,7 +133,7 @@
 	<string id="Friend07">I put you in danger, it's all my fault.</string>
 	<string id="Friend08">Please, will you forgive me?</string>
 	
-	<string id="FriendNo01">Go to hell!</string>
+	<string id="FriendNo01">Go to hell! >:<</string>
 	
 	
 	<string id="FriendYes01">Ho?! Really!?</string>
@@ -203,11 +203,6 @@
 	
 	<string id="Generique01">Not a game by</string>
 	<string id="Generique02">Probably not made with</string>
-	
-	<string id="FollowMe">Click here to follow me on twitter for future news!</string>
-	<string id=""/>
-	
-	
 	
 	
 <script>{
