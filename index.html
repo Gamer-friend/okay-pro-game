@@ -10,7 +10,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #000; /* Set background to black */
+            color: #fff; /* Set text color to white for contrast */
         }
         header {
             background: #333;
@@ -22,19 +23,14 @@
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00; /* Change color on hover */
         }
         main {
             padding: 20px;
             text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
@@ -52,8 +48,5 @@
         <p>Explore our amazing collection of games!</p>
         <p>Click on the "Games" link above to see all available games.</p>
     </main>
-    <footer>
-        <p>&copy; 2023 Game Site</p>
-    </footer>
 </body>
 </html>
