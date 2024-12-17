@@ -1,43 +1,140 @@
-
-<!--
-Game Bootstrapper
-
-@author Kasper Mol <kasper@poki.com>
-@copyright Poki 2017
--->
-<!doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-
-	<title>Crossyroad</title>
-
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" async href="app-store-interstitial.css" />
-
-	<script src="scripts/extra.min.js"></script>
-	<script src="poki-sdk.js"></script>
-	<!--Google Analytics-->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M9KJ1XPKLF"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-M9KJ1XPKLF');
-	</script>
-	<!--Google Analytics-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossy Road</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace; /* Terminal-like font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background for terminal */
+            color: #FFFFFF; /* White text for terminal */
+        }
+        #terminal {
+            width: 96%;
+            max-width: 1800px;
+            background-color: #111; /* Darker background for terminal */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            height: 700px; /* Fixed height for terminal */
+        }
+        #input {
+            width: 100%;
+            border: none;
+            background: none;
+            color: #FFFFFF; /* White text for input */
+            outline: none; /* Remove outline */
+            font-size: 16px;
+        }
+        #game {
+            display: none; /* Hide the game initially */
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+        .warning {
+            color: #FFAA00; /* Vibrant yellow-orange color */
+            font-weight: bold;
+        }
+        .error {
+            color: #FF0000; /* Vibrant red color */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-	<script src="scripts/bootstrap.min.js"></script>
-	<!--Anchor Ad Start-->
-	<script>
-		var afg={};afg.u=6328;afg.s=31;
-		afg.anchor="bottom";
-		document.write("<sc"+"ript src='//js.adforgames.com/cd.js'></sc"+"ript>");
-	</script>
-	<!--Anchor Ad End-->
+    <div id="terminal">
+        <div id="output"></div>
+        <input type="text" id="input" autofocus />
+    </div>
+    <iframe id="game" src="https://480132.github.io/v1/games/crossyroad/index.html" title="Crossy Road"></iframe>
+
+    <script>
+        const inputField = document.getElementById('input');
+        const terminalOutput = document.getElementById('output');
+        const gameFrame = document.getElementById('game');
+
+        // Function to simulate terminal command output
+        function simulateCommand(command, delay) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    const commandOutput = document.createElement('div');
+                    commandOutput.textContent = command;
+                    terminalOutput.appendChild(commandOutput);
+                    terminalOutput.scrollTop = terminalOutput.scrollHeight; // Scroll to the bottom
+                    resolve();
+                }, delay);
+            });
+        }
+
+        // Function to simulate loading percentage
+        async function simulateLoading() {
+            // Display the warning message
+            const warningMessage = document.createElement('div');
+            warningMessage.className = 'warning';
+            warningMessage.textContent = "WARNING: Default deployment with Github Pages has succeeded, but railway reported (128 dependencies not installed.) Continuing with -e x- chmod clean install command...";
+            terminalOutput.appendChild(warningMessage);
+            terminalOutput.scrollTop = terminalOutput.scrollHeight; // Scroll to the bottom
+
+            // Wait a moment before starting the loading simulation
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
+            // Run the first command
+            await simulateCommand('$~user/c:/user12 [] cd ~ git attribute?=true game display HTTPSERVER=port"3824"', 1000);
+
+            // Display the error message
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'error';
+            errorMessage.textContent = "404 error: Failed, game deployment failed. countinuing with clean install...";
+            terminalOutput.appendChild(errorMessage);
+            terminalOutput.scrollTop = terminalOutput.scrollHeight; // Scroll to the bottom
+
+            // Wait a moment before executing the next command
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
+            // Run another command after the failure
+            await simulateCommand('$~user/c:/user12 [] git att = ~~ pen.2 usb HDD clean install -x chmod ./bin', 1000);
+            for (let i = 12; i <= 100; i += 2) {
+                await simulateCommand(`Loading game data... Please wait... GHIORpull231,233,232,231,230,228,229,226,229,228,228,225, 226,227 (${i}% complete)`, 200);
+            }
+            // Clear the terminal output
+            terminalOutput.innerHTML = '';
+            // Show the welcome message
+            const promptMessage = document.createElement('div');
+            promptMessage.textContent = "Welcome to the User Github Terminal! Available commands are: start game. Please type in 'start game' to load up the game.";
+            terminalOutput.appendChild(promptMessage);
+            terminalOutput.scrollTop = terminalOutput.scrollHeight; // Scroll to the bottom
+        }
+
+        // Start the simulation when the page loads
+        window.onload = function() {
+            simulateLoading();
+        };
+
+        inputField.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const userInput = inputField.value.trim().toLowerCase();
+                if (userInput === 'start game') {
+                    // Hide the terminal and show the game
+                    terminalOutput.parentElement.style.display = 'none';
+                    gameFrame.style.display = 'block';
+                } else {
+                    // Display an error message in the terminal
+                    const errorMessage = document.createElement('div');
+                    errorMessage.textContent = 'Unknown command: ' + userInput;
+                    terminalOutput.appendChild(errorMessage);
+                    inputField.value = ''; // Clear the input field
+                    terminalOutput.scrollTop = terminalOutput.scrollHeight; // Scroll to the bottom
+                }
+            }
+        });
+    </script>
 </body>
 </html>
